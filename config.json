@@ -8,8 +8,11 @@
     "id": "robot_kmotor_kit",
     "platform": ["win", "mac"],
     "asset": {
-        "core": {
-            "main": "main.ts"
+        "arduino": {
+            "main": "main.ts",
+            "uno": {
+                "main": "main.ts"
+            }
         }
     },
     "blocks": [
