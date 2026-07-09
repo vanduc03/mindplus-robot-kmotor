@@ -1,0 +1,75 @@
+{
+    "name": "Robot STEM kMotor",
+    "description": "Thư viện điều khiển Robot học tập sử dụng driver kMotor",
+    "author": "Giáo viên STEM",
+    "email": "support@stem.edu.vn",
+    "version": "1.1.0",
+    "isBoard": false,
+    "id": "robot_kmotor_kit",
+    "platform": ["win", "mac"],
+    "asset": {
+        "core": "main.ts"
+    },
+    "blocks": [
+        {
+            "opcode": "move_distance",
+            "blockType": "command",
+            "text": "Di chuyển [DIR] [DIST] cm với tốc độ [SPEED]",
+            "arguments": {
+                "DIR": {
+                    "type": "string",
+                    "menu": "MOVE_MENU",
+                    "defaultValue": "TIEN"
+                },
+                "DIST": { "type": "number", "defaultValue": 20 },
+                "SPEED": { "type": "number", "defaultValue": 150 }
+            }
+        },
+        {
+            "opcode": "turn_degree",
+            "blockType": "command",
+            "text": "Xoay [DIR] [DEG] độ với tốc độ [SPEED]",
+            "arguments": {
+                "DIR": {
+                    "type": "string",
+                    "menu": "TURN_MENU",
+                    "defaultValue": "TRAI"
+                },
+                "DEG": { "type": "number", "defaultValue": 90 },
+                "SPEED": { "type": "number", "defaultValue": 150 }
+            }
+        },
+        {
+            "opcode": "control_stop",
+            "blockType": "command",
+            "text": "Dừng lại lập tức"
+        },
+        {
+            "opcode": "read_ultrasonic",
+            "blockType": "reporter",
+            "text": "Khoảng cách Siêu âm (Trig:[TRIG], Echo:[ECHO]) cm",
+            "arguments": {
+                "TRIG": { "type": "number", "defaultValue": 2 },
+                "ECHO": { "type": "number", "defaultValue": 3 }
+            }
+        },
+        {
+            "opcode": "read_line",
+            "blockType": "boolean",
+            "text": "Mắt dò line chân [PIN] gặp vạch đen?",
+            "arguments": {
+                "PIN": { "type": "number", "defaultValue": 4 }
+            }
+        }
+    ],
+    "menus": {
+        "MOVE_MENU": [
+            {"text": "Tiến ⬆️", "value": "TIEN"},
+            {"text": "Lùi ⬇️", "value": "LUI"}
+        ],
+        "TURN_MENU": [
+            {"text": "Trái ↩️", "value": "TRAI"},
+            {"text": "Phải ↪️", "value": "PHAI"}
+        ]
+    }
+}
