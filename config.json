@@ -1,89 +1,25 @@
 {
-  "name": {
-    "zh-cn": "Robot STEM kMotor",
-    "en": "Robot STEM kMotor"
-  },
-  "description": {
-    "zh-cn": "Extension to control Robot using kMotor driver",
-    "en": "Extension to control Robot using kMotor driver"
-  },
-  "author": "Giao vien STEM",
-  "email": "support@stem.edu.vn",
-  "license": "MIT",
-  "isBoard": false,
-  "id": "robot_kmotor_kit",
-  "platform": ["win", "mac"],
-  "version": "1.1.2",
-  "asset": {
-    "arduinoC": {
-      "dir": "mindplus-robot-kmotor-main/",
-      "version": "1.1.2",
-      "board": [
-        "arduino"
-      ],
-      "main": "main.ts"
-    }
-  },
-  "blocks": [
-    {
-      "opcode": "move_distance",
-      "blockType": "command",
-      "text": "Move [DIR] [DIST] cm at speed [SPEED]",
-      "arguments": {
-        "DIR": {
-          "type": "string",
-          "menu": "MOVE_MENU",
-          "defaultValue": "FORWARD"
-        },
-        "DIST": { "type": "number", "defaultValue": 20 },
-        "SPEED": { "type": "number", "defaultValue": 150 }
-      }
-    },
-    {
-      "opcode": "turn_degree",
-      "blockType": "command",
-      "text": "Turn [DIR] [DEG] deg at speed [SPEED]",
-      "arguments": {
-        "DIR": {
-          "type": "string",
-          "menu": "TURN_MENU",
-          "defaultValue": "LEFT"
-        },
-        "DEG": { "type": "number", "defaultValue": 90 },
-        "SPEED": { "type": "number", "defaultValue": 150 }
-      }
-    },
-    {
-      "opcode": "control_stop",
-      "blockType": "command",
-      "text": "Stop immediately"
-    },
-    {
-      "opcode": "read_ultrasonic",
-      "blockType": "reporter",
-      "text": "Ultrasonic distance (Trig:[TRIG] Echo:[ECHO]) cm",
-      "arguments": {
-        "TRIG": { "type": "number", "defaultValue": 2 },
-        "ECHO": { "type": "number", "defaultValue": 3 }
-      }
-    },
-    {
-      "opcode": "read_line",
-      "blockType": "boolean",
-      "text": "Line sensor pin [PIN] detects black line?",
-      "arguments": {
-        "PIN": { "type": "number", "defaultValue": 4 }
-      }
-    }
-  ],
-  "menus": {
-    "MOVE_MENU": [
-      {"text": "Forward", "value": "FORWARD"},
-      {"text": "Backward", "value": "BACKWARD"}
-    ],
-    "TURN_MENU": [
-      {"text": "Left", "value": "LEFT"},
-      {"text": "Right", "value": "RIGHT"}
-    ]
-  }
+	"name": {
+		"zh-cn": "Robot STEM kMotor",
+		"en": "Robot STEM kMotor"
+	},
+	"description": {
+		"zh-cn": "Extension to control Robot using kMotor driver",
+		"en": "Extension to control Robot using kMotor driver"
+	},
+	"author": "Giao vien STEM",
+	"email": "support@stem.edu.vn",
+	"license": "MIT",
+	"isBoard": false,
+	"id": "robot_kmotor_kit",
+	"platform": ["win", "mac"],
+	"version": "1.1.2",
+	"asset": {
+		"arduinoC": {
+			"dir": "arduinoC/",
+			"version": "1.1.2",
+			"board": ["uno"],
+			"main": "main.ts"
+		}
+	}
 }
